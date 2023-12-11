@@ -1,0 +1,22 @@
+﻿@model List<Post>
+<h1>Posts</h1><br />
+<div class="container">
+
+    @foreach(var obj in Model.OrderBy(u=>u.name))
+    {
+        @if(obj!=null)
+        {
+        <div class="border p-3 mt-4">
+        <h2>@obj.title</h2><br />
+        <h4>@obj.description</h4><br />
+            <p>Written By:@obj.name</p>
+        </div>
+        }
+        else
+        {
+            <h1>No posts</h1>
+        }
+    }
+</div>
+
+
